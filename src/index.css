@@ -1,0 +1,50 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #0935f9;
+  --color-brand-black: #000000;
+  --color-brand-white: #ffffff;
+
+  --font-display: "Clash Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-black text-brand-white font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display uppercase font-bold tracking-tight;
+  }
+}
+
+/* Neo-brutalist Utility Refined */
+.brutalist-border {
+  border: 2px solid #000000;
+  @apply rounded-xl;
+}
+
+.brutalist-shadow-none {
+  box-shadow: none !important;
+}
+
+.brutalist-card {
+  border: 2px solid #000000;
+  @apply bg-brand-white text-brand-black rounded-xl;
+  box-shadow: none;
+}
+
+.brutalist-btn {
+  border: 2px solid #000000;
+  @apply bg-brand-blue text-brand-white font-display uppercase px-8 py-4 rounded-lg transition-all hover:translate-x-[2px] hover:translate-y-[2px] active:translate-x-0 active:translate-y-0;
+  box-shadow: none;
+}
+
+.brutalist-btn-pill {
+  border: 2px solid #000000;
+  @apply bg-brand-blue text-brand-white font-display uppercase px-8 py-4 rounded-full transition-all hover:translate-x-[2px] hover:translate-y-[2px] active:translate-x-0 active:translate-y-0;
+  box-shadow: none;
+}
